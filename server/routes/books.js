@@ -70,10 +70,10 @@ router.post('/edit/:id', (req, res, next) => {
     
     let updatedBook = book({
         "_id": id,
-        "title": req.body.Title,
-        "price": req.body.Price,
-        "author": req.body.Author,
-        "genre": req.body.Genre
+        "title": req.body.title,
+        "price": req.body.price,
+        "author": req.body.author,
+        "genre": req.body.genre
     });
 
     book.updateOne({ _id: id }, updatedBook, (err) => {
